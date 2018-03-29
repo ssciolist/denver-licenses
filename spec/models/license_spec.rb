@@ -51,9 +51,16 @@ describe License do
     end
   end
 
-  describe 'Relationships' do
-    it 'Belongs to a ' do
+  describe 'Geocoding' do
+    it 'can return lat and long' do
+      license_6 = License.new(license_type: "Garage",
+                              license_status: "Active",
+                              license_sub_type: "NA",
+                              expiration_date: "8/15/2018 12:00:00 AM",
+                              entity_name: "GUZMAN TIRES AND AUTOMOTIVE",
+                              establishment_address: "5095  WASHINGTON ST  DENVER 80216")
 
+      expect(license_6.latitude).to eq(80)
     end
   end
 

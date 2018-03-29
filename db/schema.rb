@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180329001118) do
+ActiveRecord::Schema.define(version: 20180329002234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20180329001118) do
     t.string "expiration_date"
     t.string "entity_name"
     t.string "establishment_address"
+    t.float "latitude"
+    t.float "longitude"
   end
 
 end
