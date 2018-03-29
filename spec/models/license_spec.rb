@@ -41,12 +41,12 @@ describe License do
                                 entity_name: "GUZMAN TIRES AND AUTOMOTIVE",
                                 establishment_address: "5095  WASHINGTON ST  DENVER 80216")
 
-        expect(item1).to_not be_valid
-        expect(item2).to_not be_valid
-        expect(item3).to_not be_valid
-        expect(item4).to_not be_valid
-        expect(item5).to_not be_valid
-        expect(item6).to be_valid
+        expect(license).to_not be_valid
+        expect(license_2).to_not be_valid
+        expect(license_3).to_not be_valid
+        expect(license_4).to_not be_valid
+        expect(license_5).to_not be_valid
+        expect(license_6).to be_valid
       end
     end
   end
