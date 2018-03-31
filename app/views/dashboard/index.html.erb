@@ -1,0 +1,23 @@
+<%= form_tag(root_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search licenses" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% if @licenses.blank? %>
+  <h4>Couldn't find any licenses within a mile of that address</h4>
+<% else %>
+  <table>
+    <th>Type</th>
+    <th>Business Name</th>
+    <th>Business Address</th>
+    <th>License expiration date</th>
+    <% @licenses.each do |license| %>
+      <tr>
+        <td><%= license.license_type %></td>
+        <td><%= license.entity_name %></td>
+        <td><%= license.establishment_address %></td>
+        <td><%= license.expiration_date %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
